@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Web Programming </title>
+		<style>
+			th, td { color: #333; padding: 5px; }
+			button{	float: right; max-width: 1168px; }
+		</style>
+	</head>
+	<body>
+		<h2> Education </h2>
+		
+		<table id="table">
+			<tr>
+				<th> Level of Education </th>
+				<th> Exam/Degree </th>
+				<th> Major/Group </th>
+				<th> Board </th>
+				<th> Institute </th>
+				<th> Grade </th>
+				<th> CGPA </th>
+				<th> Passing Year </th>
+				<th> Duration </th>
+			</tr>
+			<tr id="defaultRow">
+				<td> 
+					<select>
+						<option> Secondary </option>
+						<option> Heigher Secondary </option>
+						<option> Diploma </option>
+						<option> Bachelor </option>
+						<option> Masters </option>
+						<option> PhD </option>
+					</select>
+				</td>
+				<td> 
+					<select>
+						<option> SSC </option>
+						<option> O Level </option>
+						<option> Dakhil </option>
+						<option> HSC </option>
+						<option> A Level </option>
+						<option> Alim </option>
+						<option> PGD-IT </option>
+						<option> CSE </option>
+						<option> MSc </option>
+						<option> PMIT </option>
+					</select>
+				</td>
+				<td> <input type="text" value=""> </td>
+				<td> <input type="text" value=""> </td>
+				<td> <input type="text" value=""> </td>
+				<td> 
+					<select>
+						<option> A+ </option>
+						<option> A </option>
+						<option> A- </option>
+						<option> B+ </option>
+						<option> B </option>
+						<option> B- </option>
+						<option> C </option>
+						<option> D </option>
+					</select>
+				</td>
+				<td> <input type="text" value=""> </td>
+				<td> <input type="number" value="2000"> </td>
+				<td> <input type="number" value="1"> </td>
+			</tr>
+			<tr id="bottomRow">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><button onclick="newRow();"> + </button></td>
+			</tr>
+		</table>
+		
+		<script>
+			function newRow()
+			{
+				var table = document.getElementById("table");
+				var defRowHtml = document.getElementById("defaultRow").innerHTML;
+				
+				var rows = table.rows.length;
+				var newRow = table.insertRow(rows-1);
+				newRow.innerHTML = defRowHtml;
+			}
+		</script>
+	</body>
+</html>
